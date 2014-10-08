@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :owners
 
   get 'cats/search', to: 'cats#search'
+  delete 'cats/:id/image', to: 'cats#delete_image', as: 'delete_cat_image'
+  
   resources :cats
 
   # The priority is based upon order of creation: first created -> highest priority.

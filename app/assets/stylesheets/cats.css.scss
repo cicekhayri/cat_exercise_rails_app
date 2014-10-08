@@ -12,7 +12,13 @@ h1 {
 .actions {
   float: right;
 }
+.image-index {
+  padding-right: 20px;
+}
 
+li img {
+  width: 50px;
+}
 a {
   color: #333;
   text-decoration: none;
@@ -44,3 +50,5 @@ ul {
   list-style: none;
   margin-left: -40px;
 }
+
+

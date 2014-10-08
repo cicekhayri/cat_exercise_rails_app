@@ -6,4 +6,7 @@
 <p>Owner:<br/>
 <%= @cat.owner.nil? ? "No Owner" : @cat.owner.name %>
 </p>
+
+<p>
+<%= link_to "Delete Image", delete_cat_image_path, method: :delete, data: {confirm: "Are you sure" } %>
 <%= link_to "Back", :back %>

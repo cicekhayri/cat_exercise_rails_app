@@ -1,6 +1,8 @@
 <ul>
 <% @cats.each do |cat| %>
-  <li><%= cat.name %> 
+  <li>
+    <%= image_tag cat.picture, class: "image-index" %>
+    <%= cat.name %> 
     <span class='birth-date'>
       <%= cat.birth_date.strftime("%Y %d %b") if cat.birth_date %>
     </span>

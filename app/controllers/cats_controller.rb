@@ -1,5 +1,5 @@
 class CatsController < ApplicationController
-  before_filter :find_cat, only: [:show, :destroy]
+  before_filter :find_cat, only: [:show, :destroy, :delete_image]
   def index
     @cats = Cat.all
   end
@@ -35,6 +35,12 @@ class CatsController < ApplicationController
   def destroy
     @cat.destroy
     redirect_to cats_path
+  end
+
+  def delete_image
+    @cat.remove_picture!
+    @cat.save
+    redirect_to :back
   end
 
   private
