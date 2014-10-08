@@ -8,6 +8,11 @@
     <span class="actions">
       <%= link_to "More Info", cat_path(cat) %> | 
       <%= link_to "Delete", cat_path(cat), method: :delete, data: {confirm: "Are you sure you wan't to delete the #{cat.name} "} %>
+    </span>
+
+    <strong>
+      <%= cat.owner.nil? ? "No Owner" : "Has an owner" %>
+    </strong>
   </li>
 <% end %>
 </ul>
