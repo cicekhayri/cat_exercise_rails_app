@@ -1,3 +1,6 @@
 <h1>Welcome to our LOLCats</h1>
 <p>Welcome to our LOLCats </p>
 
+<% @cats.each do |cat| %>
+  <%= link_to (image_tag cat.picture, width: 200), cat_path(cat) %>
+<% end %>
