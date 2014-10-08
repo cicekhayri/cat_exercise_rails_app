@@ -1,8 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @owner.name %>
+
+<h1> <%= @owner.name %></h1>
+</p>
+<p>
+
+Owns:<br/>
+<% if @owner.cats.any? %>
+  <% @owner.cats.each do | cat|  %>
+    <%= cat.name %>
+  <% end %>
+<% else %>
+  Doesn't own cat
+<% end %>
 </p>
 
 <%= link_to 'Edit', edit_owner_path(@owner) %> |

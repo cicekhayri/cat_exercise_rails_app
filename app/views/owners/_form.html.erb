@@ -15,7 +15,16 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="field">
+    <h2>Cats</h2>
+    <%= f.fields_for :cats do |cf| %>
+      <%= cf.label :name %><br/>
+      <%= cf.text_field :name %> 
+      <%= cf.date_field :birth_date %>
+    <% end %>
   </div>
+
+    <%= f.submit %>
 <% end %>
+<br/><br/>

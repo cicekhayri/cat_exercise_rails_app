@@ -11,7 +11,11 @@
     </span>
 
     <strong>
-      <%= cat.owner.nil? ? "No Owner" : "Has an owner" %>
+      <% if cat.owner.nil? %>
+        "No Owner"
+      <% else %>
+        <%= link_to "Has an owner", owner_path(cat.owner.id) %>
+      <% end %>
     </strong>
   </li>
 <% end %>

@@ -3,5 +3,8 @@
 <img src="/assets/cat1.jpg" width="200" height="300">
 </p>
 <p>Is born: <%= @cat.birth_date.strftime("%Y %d %b") %></p>
-
+<p>Owner:<br/>
+<%= @cat.owner.nil? ? "No Owner" : @cat.owner.name %>
+</p>
+<br/><br>
 <%= link_to "Back", :back %>
