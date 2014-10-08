@@ -1,1 +1,15 @@
 <h1>Search for cat</h1>
+
+<%= form_tag cats_search_path, method: :get do |f| %>
+  <%= search_field_tag :name %>
+  <%= submit_tag 'Search' %>
+<% end %>
+<br/>
+<h2>Search results</h2>
+<% if @cats.any? %>
+  <% @cats.each do |cat| %>
+    <%= cat.name %>
+  <% end %>
+<% else %>
+  No cats found
+<% end %>

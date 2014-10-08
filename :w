@@ -37,7 +37,8 @@ a:hover {
 
 .submit-button {
   color: green;
-  font-size: 200px;
+  height: 100px;
+  font-size: 20px;
 }
 
 ul {
