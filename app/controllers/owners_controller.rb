@@ -15,7 +15,7 @@ class OwnersController < ApplicationController
   # GET /owners/new
   def new
     @owner = Owner.new
-    @owner.cats.build
+    @owner.cats.build 
   end
 
   # GET /owners/1/edit
