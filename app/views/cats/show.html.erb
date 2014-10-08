@@ -1,2 +1,7 @@
-<h1>Cats#show</h1>
-<p>Find me in app/views/cats/show.html.erb</p>
+<h1><%= @cat.name %></h1>
+<p>
+<img src="/assets/cat1.jpg" width="200" height="300">
+</p>
+<p>Is born: <%= @cat.birth_date.strftime("%Y %d %b") %></p>
+
+<%= link_to "Back", :back %>
