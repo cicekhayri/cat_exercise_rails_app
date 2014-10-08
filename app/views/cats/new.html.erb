@@ -19,6 +19,10 @@
   <%= f.date_field :birth_date, class: "date-field" %>
   </p>
   <p>
+  <%= f.label :picture %>
+  <%= f.file_field :picture %>
+  </p>
+  <p>
   <%= f.submit class: "submit-button" %>
   </p>
 <% end %>

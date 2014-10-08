@@ -1,6 +1,6 @@
 <h1><%= @cat.name %></h1>
 <p>
-<img src="/assets/cat1.jpg" width="200" height="300">
+<%= image_tag @cat.picture, width: 200 %>
 </p>
 <p>Is born: <%= @cat.birth_date.strftime("%Y %d %b") %></p>
 <p>Owner:<br/>
