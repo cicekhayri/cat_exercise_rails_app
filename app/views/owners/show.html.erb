@@ -9,7 +9,7 @@
 Owns:<br/>
 <% if @owner.cats.any? %>
   <% @owner.cats.each do | cat|  %>
-    <%= cat.name %>
+    <%= link_to cat.name, cat_path(cat) %>
   <% end %>
 <% else %>
   Doesn't own cat
