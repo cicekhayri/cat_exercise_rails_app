@@ -12,14 +12,14 @@
   <% end %>
   <p>
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, class: "name-field" %>
   </p>
   <p>
   <%= f.label :birth_date %>
-  <%= f.date_field :birth_date %>
+  <%= f.date_field :birth_date, class: "date-field" %>
   </p>
   <p>
-  <%= f.submit %>
+  <%= f.submit class: "submit-button" %>
   </p>
 <% end %>
 

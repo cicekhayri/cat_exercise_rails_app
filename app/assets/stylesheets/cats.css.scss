@@ -6,6 +6,23 @@ body {
   margin: 0 auto;
 }
 
+h1 {
+  font-size: 50px;
+}
+
 .form-errors {
+  font-size: 20px;
   color: red;
+}
+
+.date-field {
+  font-size: 20px;
+}
+.name-field {
+  font-size: 20px;
+}
+
+.submit-button {
+  color: green;
+  font-size: 20px;
 }

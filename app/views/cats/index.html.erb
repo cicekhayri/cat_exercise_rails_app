@@ -3,10 +3,14 @@
 <div class="cats-list">
   <ul>
   <% @cats.each do |cat| %>
-    <li><%= link_to cat.name, cat_path(cat) %> 
+    <li><%= cat.name %> 
       <span class='birth-date'>
         <%= cat.birth_date.strftime("%Y %d %b") if cat.birth_date %>
       </span>
+
+      <span class="actions">
+        <%= link_to "More Info", cat_path(cat) %>
+        <%= link_to "Delete", cat_path(cat), method: :delete, data: {confirm: "Are you sure you wan't to delete the #{cat.name} "} %>
     </li>
   <% end %>
   </ul>
