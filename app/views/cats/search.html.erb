@@ -6,7 +6,7 @@
 <% end %>
 <br/>
 <h2>Search results</h2>
-<% if @cats %>
+<% if @cats.any? %>
 <%= render partial: 'cats' %>
 <% else %>
   Nothing found 

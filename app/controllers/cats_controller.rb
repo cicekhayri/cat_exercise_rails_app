@@ -9,10 +9,12 @@ class CatsController < ApplicationController
 
   def search
     search_term = params[:name] 
-    if search_term != ""
-      @cats = Cat.where(['name LIKE ?', "%#{search_term}%"]) 
+    if search_term != "" || search_term.nil?
+      @cats = Cat.where(['name LIKE ?', "%#{search_term}%"])  
+      
     else
-      []
+      @cats = []
+
     end
   end
 
