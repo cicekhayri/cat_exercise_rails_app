@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+ 
+  get 'cats/search', to: 'cats#search'
   resources :cats
 
   # The priority is based upon order of creation: first created -> highest priority.
