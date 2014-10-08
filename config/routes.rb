@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
  
+  resources :owners
+
   get 'cats/search', to: 'cats#search'
   resources :cats
 
