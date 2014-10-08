@@ -9,6 +9,19 @@ body {
 h1 {
   font-size: 50px;
 }
+.actions {
+  float: right;
+}
+
+a {
+  color: #333;
+}
+
+a:hover {
+  color: #fff;
+  background: #333;
+  text-decoration: none;
+}
 
 .form-errors {
   font-size: 20px;
