@@ -7,9 +7,7 @@
 <br/>
 <h2>Search results</h2>
 <% if @cats.any? %>
-  <% @cats.each do |cat| %>
-    <%= cat.name %>
-  <% end %>
+  <%= render partial: 'cats' %>
 <% else %>
   No cats found
 <% end %>
